@@ -1,0 +1,14 @@
+<changelogs>
+	<changelog>
+		<element>cgautoarchive</element>
+		<type>plugin</type>
+		<group>system</group>
+		<version>1.0.0</version>
+        <note>
+            <item>06/12/2021</item>
+        </note>
+         <addition>
+            <item>First version</item>
+        </addition>
+	</changelog>
+</changelogs>
