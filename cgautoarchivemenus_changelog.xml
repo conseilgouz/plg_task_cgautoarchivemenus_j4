@@ -3,6 +3,18 @@
 		<element>cgautoarchive</element>
 		<type>plugin</type>
 		<group>system</group>
+		<version>1.1.1</version>
+        <note>
+            <item>09/10/2022</item>
+        </note>
+         <fix>
+            <item>Update server error</item>
+        </fix>
+	</changelog>
+	<changelog>
+		<element>cgautoarchive</element>
+		<type>plugin</type>
+		<group>system</group>
 		<version>1.1.0</version>
         <note>
             <item>09/10/2022</item>
