@@ -1,7 +1,7 @@
 <?php
 /**
-* CG Auto Archive Menus Plugin  - Joomla 4.0.0 Plugin 
-* Version			: 1.0.0
+* CG Auto Archive Menus Plugin  - Joomla 4.1.0 Task Plugin 
+* Version			: 1.1.0
 * copyright 		: Copyright (C) 2022 ConseilGouz. All rights reserved.
 * license    		: http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
 */
@@ -12,6 +12,9 @@
    Par exemple 2021_Sem_01.pdf
    Ce plugin va déplacer les fichiers dont la semaine est dépassé dans le répertoire
    images\Menus_Cantine\archives
+*/
+/* Version 1.1.0 : changement des noms de fichiers
+   <année><no de mois>_-_<mois en alpha>.pdf
 */
 
 // No direct access to this file

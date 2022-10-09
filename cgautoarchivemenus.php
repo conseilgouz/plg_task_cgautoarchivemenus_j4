@@ -1,8 +1,8 @@
 <?php
 /** CG Auto Archive MENUS
 *
-* Version			: 1.0.0
-* Package			: Joomla 4.0
+* Version			: 1.1.0
+* Package			: Joomla 4.1
 * copyright 		: Copyright (C) 2022 ConseilGouz. All rights reserved.
 * license    		: http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
 */
@@ -14,6 +14,10 @@
    Ce plugin va déplacer les fichiers dont la semaine est dépassé dans le répertoire
    images\Menus_Cantine\archives
 */
+/* Version 1.1.0 : changement des noms de fichiers
+   <année><no de mois>_-_<mois en alpha>.pdf
+*/
+
 defined('_JEXEC') or die;
 use Joomla\CMS\Factory;
 use Joomla\CMS\Plugin\CMSPlugin;
@@ -65,8 +69,8 @@ class PlgTaskCGAutoArchiveMenus extends CMSPlugin implements SubscriberInterface
 /* -----
    Les fichiers "menu de cantine" sont stockés dans le répertoire images\Menus_Cantine.
    les noms des fichiers contenant les menus de cantine doivent être 
-   <année>_Sem_<no de semaine>.pdf
-   Par exemple 2021_Sem_01.pdf
+   <année><no de mois>__<mois en alpha>.pdf
+   Par exemple 202210_-_Octobre.pdf
    Ce plugin va déplacer les fichiers dont la semaine est dépassé dans le répertoire
    images\Menus_Cantine\archives
 */
@@ -74,7 +78,7 @@ class PlgTaskCGAutoArchiveMenus extends CMSPlugin implements SubscriberInterface
 
 	protected function autoarchive(ExecuteTaskEvent $event): int
     {
-		$week = HtmlHelper::date('now', "W");
+		$month = HtmlHelper::date('now', "m");
 		$year = HtmlHelper::date('now', "Y");
 		$dir = JPATH_SITE.'/images/Menus_Cantine';
 		$files = Folder::files($dir,'2*.pdf',null ,null ,array() , array('index.html','.htaccess'));
@@ -82,7 +86,7 @@ class PlgTaskCGAutoArchiveMenus extends CMSPlugin implements SubscriberInterface
 		if (count($files) > 0) {
 			foreach ($files as $file) {
 			    $detail = explode("_",File::stripExt($file));
-			    if ( ($detail[0] < $year) || ($detail[0] == $year && $detail[2] < $week)) {
+			    if ($detail[0] < $year.$month)  {
 			        $this->archivefile($dir.'/'.$file,$dir.'/archive',$file);
 			    }
 			}

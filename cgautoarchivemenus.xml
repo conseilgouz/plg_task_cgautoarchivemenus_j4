@@ -2,12 +2,12 @@
 <extension version="4.1" type="plugin" group="task" method="upgrade">
 	<name>PLG_TASK_CGAUTOARCHIVEMENUS</name>
 	<author>conseilgouz</author>
-	<creationDate>2022 March</creationDate>
+	<creationDate>2022 October</creationDate>
 	<copyright>Copyright (C) 2022 ConseilGouz. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>pascal.leconte@conseilgouz.com</authorEmail>
 	<authorUrl>www.conseilgouz.com</authorUrl>
-	<version>1.0.0</version>
+	<version>1.1.0</version>
 	<description>PLG_TASK_CGAUTOARCHIVEMENUS_DESC</description>
 	<files>
 		<filename plugin="cgautoarchivemenus">cgautoarchivemenus.php</filename>
@@ -19,4 +19,8 @@
 		<language tag="fr-FR">language/fr-FR/plg_task_cgautoarchivemenus.sys.ini</language>
 	</languages>
 	<scriptfile>script.php</scriptfile>
+	<changelogurl>https://raw.githubusercontent.com/conseilgouz/plg_task_cgautoarchivemenus_j4/master/cgautoarchivemenus_changelog.xml</changelogurl>
+    <server type="extension" name="cgautoarchive" priority="1">https://raw.githubusercontent.com/conseilgouz/updates_github/master/plg_task_cgautoarchivemenu_update.xml</server>
+   </updateservers>
+	
 </extension>
