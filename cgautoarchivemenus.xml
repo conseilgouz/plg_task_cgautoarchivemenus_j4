@@ -20,7 +20,7 @@
 	</languages>
 	<scriptfile>script.php</scriptfile>
 	<changelogurl>https://raw.githubusercontent.com/conseilgouz/plg_task_cgautoarchivemenus_j4/master/cgautoarchivemenus_changelog.xml</changelogurl>
-    <server type="extension" name="cgautoarchive" priority="1">https://raw.githubusercontent.com/conseilgouz/updates_github/master/plg_task_cgautoarchivemenu_update.xml</server>
+    <server type="extension" name="cgautoarchive" priority="1">https://raw.githubusercontent.com/conseilgouz/updates_github/master/plg_task_cgautoarchivemenus_update.xml</server>
    </updateservers>
 	
 </extension>
